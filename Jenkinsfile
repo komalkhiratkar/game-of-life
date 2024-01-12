@@ -27,7 +27,7 @@ pipeline {
         protocol: 'http',
         nexusUrl: '172.31.5.53:8081',
         groupId: 'dev',
-        version: 'v1',
+        version: '$BUILD_ID',
         repository: 'game-of-life-repo',
         credentialsId: 'game-of-life-creds',
         artifacts: [
