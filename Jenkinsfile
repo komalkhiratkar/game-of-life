@@ -31,7 +31,7 @@ pipeline {
         repository: 'game-of-life-repo',
         credentialsId: 'game-of-life-creds',
         artifacts: [
-            [artifactId: gameoflife,
+            [artifactId: 'gameoflife',
              classifier: '',
              file: 'gameoflife-web/target/gameoflife.war',
              type: 'war']
