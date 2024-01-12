@@ -32,7 +32,7 @@ pipeline {
         credentialsId: 'game-of-life-creds',
         artifacts: [
             [artifactId: 'gameoflife',
-             classifier: '',
+             classifier: 
              file: 'gameoflife-web/target/gameoflife.war',
              type: 'war']
         ]
