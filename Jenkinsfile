@@ -26,16 +26,16 @@ pipeline {
         nexusVersion: 'nexus3',
         protocol: 'http',
         nexusUrl: '172.31.5.53:8081',
-        groupId: 'dev',
-        version: '$BUILD_ID',
+        groupId: 'DEV',
+        version: '$BUILD_NUMBER',
         repository: 'game-of-life-repo',
         credentialsId: 'game-of-life-creds',
-        artifacts: 
+        artifacts: [
             [artifactId: 'gameoflife',
-             classifier: 
+             classifier: '', 
              file:'gameoflife-web/target/gameoflife.war',
              type: 'war']
-        
+     ]   
      )
   
      }     
