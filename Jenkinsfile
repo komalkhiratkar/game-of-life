@@ -30,12 +30,12 @@ pipeline {
         version: '$BUILD_ID',
         repository: 'game-of-life-repo',
         credentialsId: 'game-of-life-creds',
-        artifacts: [
+        artifacts: 
             [artifactId: 'gameoflife',
              classifier: 
-             file: 'gameoflife-web/target/gameoflife.war',
+             file:'gameoflife-web/target/gameoflife.war',
              type: 'war']
-        ]
+        
      )
   
      }     
