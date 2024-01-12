@@ -20,7 +20,26 @@ pipeline {
                   sh 'mvn package'
               }
           }
-         
+         stage ('nexus artifact uploader'){
+            steps {
+     nexusArtifactUploader(
+        nexusVersion: 'nexus3',
+        protocol: 'http',
+        nexusUrl: '172.31.5.53:8081',
+        groupId: 'com.wakaleo.gameoflife',
+        version: '1.0-SNAPSHOT',
+        repository: 'game-of-life-repo',
+        credentialsId: 'game-of-life-creds',
+        artifacts: [
+            [artifactId: gameoflife,
+             classifier: '',
+             file: 'gameoflife-web/target/gameoflife.war',
+             type: 'war']
+        ]
+     )
+  
+     }     
+    }
         
    
  
