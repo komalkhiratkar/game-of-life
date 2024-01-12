@@ -33,7 +33,7 @@ pipeline {
         artifacts: 
             [artifactId: 'game-of-life',
              classifier: 
-             file: 'target/game-of-life-v1.war',		,
+             file: 'target/gameoflife-V1.war',		,
              type: 'war']
         
      )
