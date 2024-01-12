@@ -25,15 +25,15 @@ pipeline {
            nexusArtifactUploader(
         nexusVersion: 'nexus3',
         protocol: 'http',
-        nexusUrl: 'my.nexus.address',
+        nexusUrl: '172.31.8.147:8081',
         groupId: 'DEV',
         version: 'V1',
         repository: 'game-of-life-repo',
-        credentialsId:'game-of-life-creds'  
+        credentialsId:'game-of-life-creds',  
         artifacts: 
             [artifactId: 'game-of-life',
-             classifier: '',
-             file: 'target/game-of-life-v1.war'		,
+             classifier: 
+             file: 'target/game-of-life-v1.war',		,
              type: 'war']
         
      )
