@@ -41,7 +41,12 @@ pipeline {
      }     
     }
         
-   
+      stage ('deploy to tomcat'){
+        steps {
+
+   deploy adapters: [tomcat8(credentialsId: 'tomcatcreds', path: '', url: 'http://172.31.3.167:8080')], contextPath: 'game-of-life --2', war: 'gameoflife-web/target/gameoflife.war'
+}
+ }
  
       }
 }
