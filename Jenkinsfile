@@ -25,7 +25,7 @@ pipeline {
      nexusArtifactUploader(
         nexusVersion: 'nexus3',
         protocol: 'http',
-        nexusUrl: '172.31.5.53:8081',
+        nexusUrl: '172.31.8.147:8081',
         groupId: 'DEV',
         version: '$BUILD_NUMBER',
         repository: 'game-of-life-repo',
